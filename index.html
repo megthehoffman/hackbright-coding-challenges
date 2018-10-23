@@ -1,0 +1,109 @@
+
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Binary Search</title>
+
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css"/>
+    <link rel="stylesheet" href="../_static/handouts-sphinx.css"/>
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic,600italic,700italic|Inconsolata:400,700'
+          rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="page-wrapper">
+    <div id="page-sidebar">
+        <header>
+            <p class="project">Hackbright Code Challenges July 2018</p>
+
+            <p class="title">Binary Search</p>
+
+            <p class="backlink"><a href="/materials/challenges/"> &laquo; Back to Homepage</a></p>
+
+        </header>
+        <div id="toc">
+            <ul>
+<li><a class="reference internal" href="#">Binary Search</a></li>
+</ul>
+
+        </div>
+    </div>
+    <div id="page-content">
+        
+  <div class="section" id="binary-search">
+<span id="id1"></span><h1>Binary Search</h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Whiteboard:</th><td class="field-body"><a class="reference internal" href="../_all.html#whiteboard-medium"><span class="std std-ref">Medium</span></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Challenge:</th><td class="field-body"><a class="reference internal" href="../_all.html#coding-challenge-easier"><span class="std std-ref">Easier</span></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Concepts:</th><td class="field-body">Binary Search</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Download:</th><td class="field-body"><a class="reference external" href="http://fellowship.hackbrightacademy.com/materials/challenges/binary-search.zip">binary-search.zip</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Solution:</th><td class="field-body"><a class="reference internal" href="solution/index.html#binary-search-solution"><span class="std std-ref">Binary Search: Solution</span></a></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Binary search is one of the most important Computer Science algorithms.
+It allows you to search a sorted list in <cite>O(log n)</cite> time, a large improvement
+over scanning every item in the list (which would be <cite>O(n)</cite> time).</p>
+<p>To do this, you examine the middle item and, if the sought-for value
+is smaller, move halfway to the left. If the sought-after value is
+larger, move halfway to the right.</p>
+<p>In this challenge, you&#8217;ll make binary search for the classic children&#8217;s
+guessing game of &#8220;pick a number from 1 to 100&#8221;.</p>
+<p>Since you use binary search, it will never take more than 7 guesses for
+a function to find a number in the range 1 to 100 (since log<sub>2</sub> 100)
+is just a little under 7).</p>
+<p>For example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">binary_search</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="go">1</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">binary_search</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+<span class="go">2</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">binary_search</span><span class="p">(</span><span class="mi">75</span><span class="p">)</span>
+<span class="go">2</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">binary_search</span><span class="p">(</span><span class="mi">31</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">7</span>
+<span class="go">True</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">max</span><span class="p">([</span><span class="n">binary_search</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">101</span><span class="p">)])</span>
+<span class="go">7</span>
+</pre></div>
+</div>
+<p>We&#8217;ve included a file, <cite>binarysearch.py</cite>, with a stub function,
+<cite>binary_search</cite>.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">binary_search</span><span class="p">(</span><span class="n">val</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Using binary search, find val in range 1-100. Return # of guesses.&quot;&quot;&quot;</span>
+
+    <span class="k">assert</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">val</span> <span class="o">&lt;</span> <span class="mi">101</span><span class="p">,</span> <span class="s2">&quot;Val must be between 1-100&quot;</span>
+
+    <span class="n">num_guesses</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">return</span> <span class="n">num_guesses</span>
+</pre></div>
+</div>
+<p>Implement this.</p>
+</div>
+
+
+
+    </div>
+</div>
+<script type="text/javascript" src="../_static/jquery.js"></script>
+<script type="text/javascript" src="../_static/underscore.js"></script>
+<script type="text/javascript" src="../_static/doctools.js"></script> 
+</body>
+</html>
