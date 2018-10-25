@@ -103,6 +103,8 @@ def furthest(num_holes, cafes):
         max_distance = 0
 
         for i in range(len(cafes)):
+            # This works because the index between the first cafe and the last cafe // 2 is negative,
+            # so it is ok that the first comparison is between the first indices and the last indices 
             distance_between_cafes = (cafes[i] - cafes[i-1]) // 2
             max_distance = max(distance_to_first_cafe, distance_to_last_cafe, distance_between_cafes)
 
